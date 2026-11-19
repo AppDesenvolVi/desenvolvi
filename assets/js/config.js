@@ -24,7 +24,7 @@ window.DV_CONFIG = {
      "Agendar aula experimental" abre a escolha de unidade e segue pelo WhatsApp. */
   contato: {
     experimentalUrl: '',
-    matriculaUrl: '',
+    matriculaUrl: 'https://matricula.desenvolvi.site',
     tiktok: '',
     facebook: ''
   },
@@ -71,8 +71,8 @@ window.DV_CONFIG = {
       endereco: 'R. Morais e Castro, 300 · Piso P1 · Passos · CEP 36025-160',
       horarios: '',
       telefone: '5532991359888',
-      /* tabela de preços (link curto do redirect.pizza; troque o destino lá quando a tabela mudar) */
-      tabelaUrl: 'https://jf.desenvolvi.site/tabela',
+      /* tabela de preços na página de contatos (vazio = não aparece). Ex.: 'https://jf.desenvolvi.site/tabela' */
+      tabelaUrl: '',
       mapa: '',
       /* endereços dos mapas incorporados (copiados do site atual). Só links que começam com https://www.google.com/maps/embed */
       mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.1144368500663!2d-43.34811699057653!3d-21.775831586553544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b8a59b03d31%3A0x2a6d3ac0fcff81c4!2sDesenvolVi%20-%20Centro%20de%20Desenvolvimento%20Infantil!5e0!3m2!1sen!2sbr!4v1748119333025!5m2!1sen!2sbr',
@@ -87,7 +87,7 @@ window.DV_CONFIG = {
       endereco: 'R. Nelson Cesar de Oliveira, 450 · Jardim das Indústrias · CEP 12240-220',
       horarios: '',
       telefone: '5512992009404',
-      tabelaUrl: 'https://sjc.desenvolvi.site/tabela',
+      tabelaUrl: '',
       mapa: '',
       mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.4364489621526!2d-45.923388223833165!3d-23.227199779030816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc35748b3928f9%3A0x9a49e282d835cf42!2sR.%20Nelson%20Cesar%20de%20Oliveira%2C%20450%20-%20Jardim%20das%20Industrias%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012240-220!5e0!3m2!1spt-BR!2sbr!4v1754953651960!5m2!1spt-BR!2sbr',
       fachadaEmbed: 'https://www.google.com/maps/embed?pb=!4v1754953469311!6m8!1m7!1sxOYwwIEXyU9pOCGIJQs3BQ!2m2!1d-23.22732641787419!2d-45.92066869885393!3f127.91492132390954!4f-1.5660314068639138!5f0.4000000000000002',

@@ -146,7 +146,7 @@
       { titulo: 'WhatsApp', itens: us.map(function (u) {
         return { id: 'whatsapp_' + u.id, texto: u.nome + (u.uf ? ' (' + u.uf + ')' : ''), url: whatsapp(u, 'contato'), icone: ICONE_WHATS };
       }) },
-      { titulo: 'Matrícula e valores', itens: [
+      { titulo: us.some(function (u) { return urlSegura(u.tabelaUrl); }) ? 'Matrícula e valores' : 'Matrícula', itens: [
         urlSegura(c.matriculaUrl) ? { id: 'matricula', texto: 'Formulário de matrícula', url: urlSegura(c.matriculaUrl), icone: ICONES.form } : null
       ].concat(us.map(function (u) {
         var t = urlSegura(u.tabelaUrl);
