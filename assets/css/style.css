@@ -588,3 +588,31 @@ html,body{overflow-x:clip}
 @media (max-width:767px){.foto-red.retrato{max-width:280px;margin:0 auto}}
 /* O que falam: esconde o título "avaliação de clientes" que vem do quadro de avaliações do Google */
 [data-avaliacoes] .es-widget-title-container{display:none!important}
+
+/* Chamada final "Fale com a gente": logo-ícone da marca no lugar do bebê */
+.cta-final .cta-logo{flex:none;width:200px;height:200px;border-radius:50%;border:6px solid #fff;box-shadow:0 20px 40px rgba(30,21,53,.25)}
+@media (max-width:767px){.cta-final .cta-logo{width:140px;height:140px;border-width:5px}}
+
+/* ==========================================================================
+   Página de contatos (link da bio): pensada para o celular, uma coluna de botões
+   ========================================================================== */
+html:has(> body.pg-links){background:#8A55F7}
+body.pg-links{min-height:100vh;background:linear-gradient(160deg,#A57BFF 0%,var(--brand) 55%,#8A55F7 100%)}
+.links-wrap{max-width:480px;margin:0 auto;padding:var(--space-7) var(--space-4) var(--space-7);text-align:center}
+.links-logo{display:block;width:120px;height:120px;margin:0 auto var(--space-4);border-radius:50%;border:5px solid #fff;box-shadow:0 14px 30px rgba(30,21,53,.25)}
+.links-tit{color:#fff;font-size:36px;line-height:40px;margin:0 0 var(--space-2)}
+.links-sub{font-family:var(--subtitulo);font-weight:500;font-size:18px;line-height:26px;color:var(--on-surface-brand);margin:0 0 var(--space-6)}
+.links-sub a{color:var(--on-surface-brand)}
+.links-grupo{margin:0 0 var(--space-5)}
+.links-grupo-tit{font-family:var(--subtitulo);font-weight:600;font-size:15px;line-height:20px;letter-spacing:.09em;text-transform:uppercase;color:var(--on-surface-brand);margin:0 0 var(--space-3)}
+.link-btn{display:flex;align-items:center;gap:var(--space-3);min-height:58px;padding:var(--space-2) var(--space-5) var(--space-2) var(--space-2);margin:0 0 var(--space-3);background:#fff;border-radius:var(--radius-pill);color:var(--ink);font-weight:700;font-size:17px;line-height:22px;text-decoration:none;box-shadow:0 6px 16px rgba(30,21,53,.15);transition:transform .15s ease,box-shadow .15s ease}
+.link-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(30,21,53,.22)}
+.link-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.link-ic{flex:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--surface-soft);color:var(--brand-text)}
+.link-ic svg,.link-ic .ic{width:21px;height:21px}
+.link-txt{flex:1;text-align:left}
+.link-btn.destaque{background:var(--ink);color:#fff;font-size:18px}
+.link-btn.destaque .link-ic{background:var(--explorar);color:var(--on-pilula)}
+.links-faixa{display:block;margin:var(--space-6) auto var(--space-3);width:160px;height:auto}
+.links-rodape{margin:0;font-size:14px;line-height:20px;color:var(--on-surface-brand)}
+@media (prefers-reduced-motion:reduce){.link-btn{transition:none}.link-btn:hover{transform:none}}

@@ -112,6 +112,64 @@
     document.body.appendChild(sc);
   }
 
+  /* página de contatos (link da bio): um botão por canal, em grupos. Canal sem endereço em config.js não aparece. */
+  var ICONES = (function () {
+    function sv(p) { return '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>'; }
+    return {
+      agenda: sv('<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/>'),
+      site: sv('<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'),
+      form: sv('<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h6"/>'),
+      tabela: sv('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/>'),
+      camera: sv('<path d="M3 8a2 2 0 0 1 2-2h2l2-2h6l2 2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="4"/>'),
+      nota: sv('<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'),
+      pessoas: sv('<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>')
+    };
+  })();
+  function renderContato() {
+    var el = document.querySelector('[data-contato]');
+    if (!el) return;
+    var c = CFG.contato || {}, m = CFG.marca || {}, us = unidades();
+    function botao(it) {
+      var ext = it.externo !== false;
+      var atr = it.agendar ? ' data-agendar="' + escapeHtml(it.agendar) + '"' : (ext ? ' target="_blank" rel="noopener"' : '');
+      return `<a class="link-btn${it.destaque ? ' destaque' : ''}" href="${escapeHtml(it.url)}"${atr} data-evento="contato_link" data-detalhe="${escapeHtml(it.id)}">
+        <span class="link-ic">${it.icone}</span><span class="link-txt">${escapeHtml(it.texto)}</span></a>`;
+    }
+    var experimental = urlSegura(c.experimentalUrl);
+    var grupos = [
+      { titulo: '', itens: [
+        /* com o formulário em config.js, abre o formulário; sem ele, abre a escolha de unidade e segue pelo WhatsApp */
+        experimental
+          ? { id: 'experimental', texto: 'Agendar aula experimental', url: experimental, icone: ICONES.agenda, destaque: true }
+          : (us.length ? { id: 'experimental', texto: 'Agendar aula experimental', url: '#', agendar: 'experimental', icone: ICONES.agenda, destaque: true } : null)
+      ] },
+      { titulo: 'WhatsApp', itens: us.map(function (u) {
+        return { id: 'whatsapp_' + u.id, texto: u.nome + (u.uf ? ' (' + u.uf + ')' : ''), url: whatsapp(u, 'contato'), icone: ICONE_WHATS };
+      }) },
+      { titulo: 'Matrícula e valores', itens: [
+        urlSegura(c.matriculaUrl) ? { id: 'matricula', texto: 'Formulário de matrícula', url: urlSegura(c.matriculaUrl), icone: ICONES.form } : null
+      ].concat(us.map(function (u) {
+        var t = urlSegura(u.tabelaUrl);
+        return t ? { id: 'tabela_' + u.id, texto: 'Tabela de preços · ' + u.nome, url: t, icone: ICONES.tabela } : null;
+      })) },
+      { titulo: 'Conheça a DesenvolVi', itens: [
+        { id: 'site', texto: 'Nosso site', url: 'index.html', icone: ICONES.site, externo: false },
+        urlSegura(m.instagram) ? { id: 'instagram', texto: 'Instagram' + (m.instagramUsuario ? ' ' + m.instagramUsuario : ''), url: urlSegura(m.instagram), icone: ICONES.camera } : null,
+        urlSegura(c.tiktok) ? { id: 'tiktok', texto: 'TikTok', url: urlSegura(c.tiktok), icone: ICONES.nota } : null,
+        urlSegura(c.facebook) ? { id: 'facebook', texto: 'Facebook', url: urlSegura(c.facebook), icone: ICONES.pessoas } : null
+      ] }
+    ];
+    var buf = '';
+    grupos.forEach(function (g) {
+      var itens = g.itens.filter(Boolean);
+      if (!itens.length) return;
+      var h = '';
+      itens.forEach(function (it) { h += botao(it); });
+      buf += `<section class="links-grupo">${g.titulo ? `<h2 class="links-grupo-tit">${escapeHtml(g.titulo)}</h2>` : ''}${h}</section>`;
+    });
+    el.innerHTML = buf;
+  }
+
   function renderEquipe() {
     var el = document.querySelector('[data-equipe]');
     if (!el) return;
@@ -505,6 +563,7 @@
     renderEquipe();
     renderDepoimentos();
     renderAvaliacoes();
+    renderContato();
     initAgendar();
     var ano = $('ano');
     if (ano) ano.textContent = String(new Date().getFullYear());
