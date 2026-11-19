@@ -582,3 +582,9 @@ html,body{overflow-x:clip}
 .formacao li{position:relative;padding-left:22px;margin-bottom:var(--space-3)}
 .formacao li:last-child{margin-bottom:0}
 .formacao li::before{content:"";position:absolute;left:2px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--brand)}
+/* Quem somos: foto da Tia Vivi em formato retrato */
+.foto-red.retrato{aspect-ratio:3/4;width:100%;max-width:320px;justify-self:center;align-self:center}
+.foto-red.retrato img{object-position:50% 20%}
+@media (max-width:767px){.foto-red.retrato{max-width:280px;margin:0 auto}}
+/* O que falam: esconde o título "avaliação de clientes" que vem do quadro de avaliações do Google */
+[data-avaliacoes] .es-widget-title-container{display:none!important}

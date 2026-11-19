@@ -36,6 +36,7 @@ window.DV_CONFIG = {
     psicomotor: { src: 'assets/img/fotos/psicomotor.jpg', alt: 'Bebê se movimentando no chão com apoio de um adulto' },
     afetivo: { src: 'assets/img/fotos/afetivo.jpg', alt: 'Mãe e bebê trocando olhares e carinho' },
     social: { src: 'assets/img/fotos/social.jpg', alt: 'Bebês interagindo lado a lado durante a aula' },
+    tia_vivi: { src: 'assets/img/fotos/tia_vivi.jpg', alt: 'Drª Viviane Hipólito, a Tia Vivi, sorrindo' },
     consultoria: { src: 'assets/img/fotos/consultoria.jpg', alt: 'Fisioterapeuta sentada no chão com uma mãe e o bebê, fazendo anotações enquanto segura a mão do bebê' }
   },
 
