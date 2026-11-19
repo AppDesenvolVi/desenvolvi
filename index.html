@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DesenvolVi · Centro de Desenvolvimento Infantil</title>
+<meta name="description" content="A DesenvolVi é um centro de desenvolvimento infantil em Juiz de Fora e São José dos Campos: consultoria personalizada (avaliação neuropsicomotora) e aulas em turmas regulares, com a família junto.">
+<meta name="theme-color" content="#9966FF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="DesenvolVi · Centro de Desenvolvimento Infantil">
+<meta property="og:description" content="A DesenvolVi é um centro de desenvolvimento infantil em Juiz de Fora e São José dos Campos: consultoria personalizada (avaliação neuropsicomotora) e aulas em turmas regulares, com a família junto.">
+<meta property="og:image" content="assets/img/icone-app-512.png">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css?v=3">
+<script>(function(){var visto=false;try{visto=sessionStorage.getItem('dv-intro-visto')==='1';}catch(e){}try{if(!visto&&!location.hash&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){document.documentElement.classList.add('intro-on','intro-lock');}}catch(e){}})();</script>
+</head>
+<body>
+<div class="abertura" id="intro" role="dialog" aria-modal="true" aria-label="Vídeo de abertura">
+  <div class="intro-bg" style="background-image:url('assets/video/intro-poster.jpg')"></div>
+  <div class="intro-clip" id="intro-clip">
+    <video class="intro-video" id="intro-video" muted playsinline preload="auto" poster="assets/video/intro-poster.jpg" aria-label="Vídeo de abertura"></video>
+  </div>
+  <div class="intro-ctrl">
+    <button class="intro-btn" id="intro-som" type="button" aria-pressed="false" aria-label="Ativar o som do vídeo"><svg class="som-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m23 9-6 6"/><path d="m17 9 6 6"/></svg><svg class="som-on" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></button>
+    <button class="intro-btn" id="intro-pular" type="button">Pular abertura <span aria-hidden="true">›</span></button>
+  </div>
+  <noscript><style>.abertura{display:none!important}html{overflow:auto!important}</style></noscript>
+</div>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap hd">
+    <a class="marca" href="index.html" aria-label="DesenvolVi, Centro de Desenvolvimento Infantil, página inicial"><img src="assets/img/logo-desenvolvi.png" alt="DesenvolVi, Centro de Desenvolvimento Infantil" width="276" height="70"></a>
+    <nav class="menu" id="menu" aria-label="Menu principal">
+      <ul><li><a href="quem-somos.html">Quem somos</a></li><li><a href="index.html#servicos">O que fazemos</a></li><li><a href="como-fazemos.html">Como fazemos</a></li><li><a href="index.html#unidades">Onde nos encontrar</a></li><li><a href="o-que-falam.html">O que falam da gente</a></li></ul>
+      <a class="lnk-app" href="#" data-app hidden>Entrar no app</a>
+    </nav>
+    <div class="hd-acoes">
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero lilas">
+    <span class="decor" aria-hidden="true"><span class="bolha b1"></span><span class="bolha b2"></span><span class="bolha b4"></span></span>
+    <div class="wrap hero-in">
+      <div class="ht-text">
+        <p class="sobre">Desenvolvimento infantil</p>
+        <h1 class="display">O estímulo certo, na fase certa.</h1>
+        <p class="lead">Orientações e aulas preparadas por especialistas em desenvolvimento infantil para estimular cada fase do seu bebê, prevenir atrasos e observar sinais de alerta desde cedo, com a família junto.</p>
+      </div>
+      <div class="ht-art">
+        <div class="ht-frame" data-foto="hero"></div>
+        <img class="pill p1" src="assets/img/pilulas/explorar.svg" alt="" width="190" height="40"><img class="pill p2" src="assets/img/pilulas/aprender.svg" alt="" width="190" height="40"><img class="pill p3" src="assets/img/pilulas/incentivar.svg" alt="" width="190" height="40"><img class="pill p4" src="assets/img/pilulas/desenvolver.svg" alt="" width="190" height="40">
+      </div>
+      <div class="acoes">
+        <a class="btn btn-claro" href="#servicos" data-evento="cta_hero">Conheça o que fazemos</a>
+      </div>
+    </div>
+    <svg class="onda o-escuro onda-base" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,48 C220,92 420,8 720,40 C1010,72 1220,18 1440,44 L1440,96 L0,96 Z" fill="currentColor"/></svg>
+  </section>
+
+  <section class="escuro">
+    <div class="wrap duas secao-in">
+      <div>
+        <p class="numero"><span>1.000</span> dias</p>
+        <h2>Os primeiros anos passam rápido</h2>
+        <p>Da gestação aos 2 anos, o cérebro se desenvolve num ritmo que não se repete. O que a criança vive nesse período forma a base para tudo o que vem depois.</p>
+        <p>Por isso começamos cedo, com estímulos certos para cada fase e com a família por perto.</p>
+        <p><a class="lnk" href="#" data-rede>Conheça mais em Rede Primeiros Anos</a></p>
+      </div>
+      <figure class="foto-red anel" data-foto="afetivo"></figure>
+    </div>
+    <svg class="onda o-branco onda-base" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,48 C220,92 420,8 720,40 C1010,72 1220,18 1440,44 L1440,96 L0,96 Z" fill="currentColor"/></svg>
+  </section>
+
+  <section class="secao" id="ciencia">
+    <div class="wrap">
+      <p class="sobre">Três ideias-chave</p>
+      <h2>O que a ciência mostra sobre o cérebro do bebê</h2>
+      <p class="intro-sec">O Centro de Desenvolvimento da Criança da Universidade de Harvard resume o tema em três conceitos. Eles explicam por que o nosso trabalho começa cedo e sempre com a família junto.</p>
+      <div class="grade g3 ideias"><article class="cartao ideia"><span class="n" aria-hidden="true">1</span><h3>As experiências moldam o cérebro</h3><p>As conexões cerebrais se formam aos poucos, do mais simples ao mais complexo. O que a criança vive nos primeiros anos ajuda a construir essa arquitetura.</p><p class="ideia-dv"><strong>Na DesenvolVi:</strong> Atividades pensadas para cada fase, com os estímulos certos.</p></article><article class="cartao ideia"><span class="n" aria-hidden="true">2</span><h3>Ação e reação fortalecem circuitos</h3><p>Quando o bebê faz um gesto, um som ou um balbucio e um adulto responde com atenção, os circuitos do cérebro se fortalecem. É por isso que a interação com um adulto atento faz diferença.</p><p class="ideia-dv"><strong>Na DesenvolVi:</strong> A família participa das aulas, e esse ciclo de ação e reação está em cada atividade.</p></article><article class="cartao ideia"><span class="n" aria-hidden="true">3</span><h3>Estresse tóxico atrapalha</h3><p>Estresse intenso e prolongado, sem o apoio de adultos, pode prejudicar o desenvolvimento do cérebro e a saúde ao longo da vida. Presença e acolhimento protegem.</p><p class="ideia-dv"><strong>Na DesenvolVi:</strong> Um ambiente acolhedor, no tempo de cada criança, com os pais por perto.</p></article></div>
+      <p class="fonte">Fonte: Center on the Developing Child, Universidade de Harvard, Três conceitos fundamentais sobre o desenvolvimento na primeira infância.</p>
+    </div>
+  </section>
+
+  <section class="secao suave" id="cuidados">
+    <div class="wrap">
+      <p class="sobre sobre-alerta">Atenção</p>
+      <h2>Cuidados do dia a dia</h2>
+      <p class="intro-sec">Boa intenção nem sempre basta. Algumas situações comuns em casa podem atrapalhar o desenvolvimento.</p>
+      <div class="grade g3 cuidados"><article class="cartao cuidado"><h3>Bebê parado demais</h3><p>Muito tempo no bebê-conforto, carrinho, cadeirinha ou cercadinho tira do bebê a chance de se mexer. Para quem ainda não se move sozinho, a OMS recomenda pelo menos 30 minutos de bruços por dia, acordado, e não mais de 1 hora seguida contido.</p><p class="na-pratica"><strong>Na prática:</strong> Alterne chão, tapete, bruços e colo.</p></article><article class="cartao cuidado"><h3>Andador e brinquedos inadequados</h3><p>Segundo a Sociedade Brasileira de Pediatria, o andador não traz benefício ao bebê, aumenta o risco de acidentes e pode atrasar o desenvolvimento psicomotor.</p><p class="na-pratica"><strong>Na prática:</strong> Prefira brinquedos simples, da idade certa e com selo do Inmetro.</p></article><article class="cartao cuidado"><h3>Pouca interação</h3><p>Bebê muito tempo sozinho, sem conversa e sem brincar junto, recebe poucas respostas do adulto. É dessa troca que vêm os estímulos que fortalecem o cérebro.</p><p class="na-pratica"><strong>Na prática:</strong> Converse, cante, nomeie o que vê e responda aos sons e gestos dele.</p></article></div>
+      <div class="telas">
+        <h3>E as telas?</h3>
+        <div class="telas-faixas">
+          <p><span class="idade">0 a 2 anos</span><strong>Nenhuma tela</strong>Nessa fase, o aprendizado depende do contato com outras pessoas.</p>
+          <p><span class="idade">2 a 5 anos</span><strong>Até 1 hora por dia</strong>De preferência com interação e supervisão de um adulto.</p>
+        </div>
+        <p class="telas-nota">Troque o tempo de tela por brincadeira, leitura junto e conversa. Evite telas nas refeições e no quarto.</p>
+      </div>
+      <p class="fonte">Fontes: OMS/OPAS (2019); Sociedade Brasileira de Pediatria, sobre andadores e brinquedos seguros; Núcleo Ciência pela Infância (2025), sobre telas.</p>
+      <p class="fonte fonte-aviso">Estas dicas são gerais e informativas e não substituem a avaliação de um profissional de saúde. <a href="#" data-rede>Mais orientações na Rede Primeiros Anos</a>.</p>
+      <div class="cartao gancho">
+        <div>
+          <h3>Dúvida é normal. Ninguém precisa descobrir sozinho.</h3>
+          <p>Meu bebê está se desenvolvendo como esperado? Estou estimulando do jeito certo? Na consultoria personalizada, avaliamos o desenvolvimento para a idade e orientamos a família.</p>
+        </div>
+        <a class="btn btn-primary" href="index.html#unidades" data-agendar="avaliacao" data-evento="gancho_cuidados">Falar sobre a consultoria</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="servicos">
+    <div class="wrap">
+      <p class="sobre">Como ajudamos nesse processo</p>
+      <h2>Nossos serviços</h2>
+      <p class="intro-sec">Dois caminhos, sempre com a família junto: um olhar especializado para o seu filho e aulas que fazem parte da rotina.</p>
+      <div class="grade g2 servicos">
+        <article class="cartao servico">
+          <figure class="sv-foto" data-foto="consultoria"></figure>
+          <p class="tag">Avaliação neuropsicomotora</p>
+          <h3>Consultoria personalizada</h3>
+          <p>Um olhar especializado para o seu filho. Verificamos se o desenvolvimento está de acordo com a idade, identificamos sinais de alerta e orientamos a família sobre posicionamentos e exercícios que entram na rotina.</p>
+          <div class="sv-acoes">
+            <a class="btn btn-sec" href="index.html#unidades" data-agendar="avaliacao" data-evento="cta_consultoria">Falar sobre a consultoria</a>
+            <a class="lnk" href="#" data-consultoria>Entender a consultoria no Instagram</a>
+          </div>
+        </article>
+        <article class="cartao servico">
+          <figure class="sv-foto" data-foto="social"></figure>
+          <p class="tag">Experiências e incentivos</p>
+          <h3>Aulas em turmas regulares</h3>
+          <p>Aulas preparadas por especialistas em desenvolvimento infantil, com os estímulos certos para cada fase, para prevenir atrasos e observar sinais de alerta desde cedo. Os pais participam junto, e a primeira aula é experimental, sem compromisso.</p>
+          <div class="sv-acoes">
+            <a class="btn btn-primary" href="index.html#unidades" data-agendar="experimental" data-evento="cta_turmas">Agendar aula experimental</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao suave" id="comecar">
+    <div class="wrap">
+      <h2>Começar é simples</h2>
+      <p class="intro-sec">A primeira aula é experimental: vocês conhecem o espaço, a especialista e a dinâmica das aulas, sem compromisso.</p>
+      <ol class="passos cores">
+        <li><span class="n" aria-hidden="true">1</span><h3>Chame no WhatsApp</h3><p>Escolha a unidade, tire suas dúvidas e agende a aula experimental.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h3>Experimente</h3><p>Na aula experimental, conheça o espaço, a especialista e veja seu filho explorar.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h3>Escolha o seu caminho</h3><p>Siga com as aulas em turma regular ou com a consultoria personalizada.</p></li>
+      </ol>
+      <p class="sec-acao"><a class="btn btn-primary" href="index.html#unidades" data-agendar="experimental" data-evento="cta_comecar">Agendar aula experimental</a></p>
+    </div>
+  </section>
+
+  <section class="secao com-onda" id="unidades">
+    <div class="wrap">
+      <p class="sobre">Unidades</p>
+      <h2>Onde nos encontrar</h2>
+      <div class="grade g2" data-unidades="mapas"></div>
+    </div>
+    <svg class="onda o-escuro onda-base" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0,48 C220,92 420,8 720,40 C1010,72 1220,18 1440,44 L1440,96 L0,96 Z" fill="currentColor"/></svg>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap ft">
+    <div class="ft-marca">
+      <img src="assets/img/logo-desenvolvi-escuro.png" alt="DesenvolVi, Centro de Desenvolvimento Infantil" width="276" height="70" loading="lazy">
+      <p>Desenvolvimento infantil com especialistas e com a família junto.</p>
+      <p><a href="#" data-instagram data-usuario>Instagram</a></p>
+    </div>
+    <div>
+      <h2 class="ft-tit">Unidades</h2>
+      <ul class="ft-lista" data-unidades="rodape"></ul>
+    </div>
+    <div>
+      <h2 class="ft-tit">Navegue</h2>
+      <ul class="ft-lista"><li><a href="quem-somos.html">Quem somos</a></li><li><a href="index.html#servicos">O que fazemos</a></li><li><a href="como-fazemos.html">Como fazemos</a></li><li><a href="index.html#unidades">Onde nos encontrar</a></li><li><a href="o-que-falam.html">O que falam da gente</a></li></ul>
+      <p><a href="#" data-app hidden>Entrar no app</a></p>
+    </div>
+    <div class="ft-rede">
+      <h2 class="ft-tit">Rede Primeiros Anos</h2>
+      <p>A DesenvolVi é membro fundador da Rede Primeiros Anos, que reúne profissionais pelo desenvolvimento infantil.</p>
+      <p><a href="#" data-rede>Conheça a Rede</a></p>
+    </div>
+  </div>
+  <div class="wrap ft-base">
+    <img class="faixa" src="assets/img/faixa.svg" alt="" width="200" height="12">
+    <p>© <span id="ano">2026</span> DesenvolVi · Centro de Desenvolvimento Infantil</p>
+  </div>
+</footer>
+
+<dialog class="dlg" id="dlg-agendar" aria-labelledby="dlg-tit">
+  <div class="dlg-caixa">
+    <button class="dlg-fechar" type="button" data-fechar aria-label="Fechar">×</button>
+    <h2 id="dlg-tit">Escolha a unidade</h2>
+    <p>A conversa continua pelo WhatsApp.</p>
+    <ul class="dlg-lista" id="dlg-unidades"></ul>
+  </div>
+</dialog>
+
+<script src="assets/js/config.js?v=3"></script>
+<script src="assets/js/app.js?v=3"></script>
+</body>
+</html>
