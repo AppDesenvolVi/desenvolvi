@@ -590,8 +590,12 @@ html,body{overflow-x:clip}
 [data-avaliacoes] .es-widget-title-container{display:none!important}
 
 /* Chamada final "Fale com a gente": logo-ícone da marca no lugar do bebê */
-.cta-final .cta-logo{flex:none;width:200px;height:200px;border-radius:50%;border:6px solid #fff;box-shadow:0 20px 40px rgba(30,21,53,.25)}
-@media (max-width:767px){.cta-final .cta-logo{width:140px;height:140px;border-width:5px}}
+/* logo-ícone com profundidade (sombra projetada e relevo interno), sem borda */
+.logo-3d{position:relative;display:block;flex:none;border-radius:50%;box-shadow:0 24px 44px rgba(30,21,53,.38),0 8px 16px rgba(30,21,53,.26)}
+.logo-3d img,.cta-final .logo-3d img{display:block;width:100%;height:100%;border-radius:50%}
+.logo-3d::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;box-shadow:inset 0 -10px 18px rgba(30,21,53,.30),inset 0 8px 14px rgba(255,255,255,.30)}
+.cta-final .cta-logo{width:200px;height:200px}
+@media (max-width:767px){.cta-final .cta-logo{width:140px;height:140px}}
 
 /* ==========================================================================
    Página de contatos (link da bio): pensada para o celular, uma coluna de botões
@@ -599,7 +603,7 @@ html,body{overflow-x:clip}
 html:has(> body.pg-links){background:#8A55F7}
 body.pg-links{min-height:100vh;background:linear-gradient(160deg,#A57BFF 0%,var(--brand) 55%,#8A55F7 100%)}
 .links-wrap{max-width:480px;margin:0 auto;padding:var(--space-7) var(--space-4) var(--space-7);text-align:center}
-.links-logo{display:block;width:120px;height:120px;margin:0 auto var(--space-4);border-radius:50%;border:5px solid #fff;box-shadow:0 14px 30px rgba(30,21,53,.25)}
+.links-logo{width:128px;height:128px;margin:0 auto var(--space-5)}
 .links-tit{color:#fff;font-size:36px;line-height:40px;margin:0 0 var(--space-2)}
 .links-sub{font-family:var(--subtitulo);font-weight:500;font-size:18px;line-height:26px;color:var(--on-surface-brand);margin:0 0 var(--space-6)}
 .links-sub a{color:var(--on-surface-brand)}
